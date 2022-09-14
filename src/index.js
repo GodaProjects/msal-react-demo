@@ -11,6 +11,7 @@ import App from './App';
 // My changes
 import {PublicClientApplication} from '@azure/msal-browser'
 
+// Keep the instantiation of the msal object outside the context of the component tree because you dont want to instantiate it everytime.
 const pca = new PublicClientApplication({
     auth: {
         clientId: '2b53c05e-ea15-4229-951e-8e968bf28b9d',
